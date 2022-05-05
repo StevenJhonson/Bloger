@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Blogger</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+
+    .head {
+        background-image: url(images/banner1.png);
+        height: 135vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .blogger {
+        height: 15vh;
+        display: flex;
+        margin: 0 auto;
+        width: 92%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .blogger h1 {
+        font-size: 45px;
+        color: aqua;
+        font-weight: bold;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    li {
+        margin-left: 40px;
+        color: white;
+        text-transform: uppercase;
+        transition: 0.5s;
+    }
+
+    .blog {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        height: 80vh;
+
+    }
+
+    .landing {
+        width: 68%;
+    }
+
+    .blog .landing h1 {
+        font-size: 80px;
+    }
+
+    .blog .landing h1:nth-child(1) {
+        color: aqua;
+        margin-bottom: 20px;
+    }
+
+    .blog .landing h1:nth-child(2) {
+        color: white;
+    }
+
+    .blog .landing p {
+        color: white;
+        margin-top: 80px;
+        line-height: 30px;
+    }
+
+    .blog .landing button {
+        padding: 16px 45px;
+        font-size: larger;
+        border: none;
+        transition: 1s;
+        margin-top: 50px;
+    }
+
+    .blog .landing button:hover {
+        background-color: aqua;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+
+    ul li:hover {
+        color: black;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+    .body-1 {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .body-1 h1 {
+        margin-top: 80px;
+        font-size: 40px;
+        color: rgba(0, 0, 0, 0.801);
+        margin-bottom: 30px;
+    }
+
+    .body-1 p {
+        color: rgba(0, 0, 0, 0.801);
+        font-size: smaller;
+        margin-bottom: 60px;
+    }
+
+    .div {
+        display: flex;
+        box-shadow: rgb(179, 177, 177) 1px 1px 4px 1px;
+
+    }
+
+    .text {
+        padding: 32px;
+        text-align: start;
+        line-height: 35px;
+    }
+
+    .text h2 {
+        line-height: 35px;
+        color: rgba(0, 0, 0, 0.801);
+        margin-bottom: 20px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .post {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+    }
+
+
+
+
+
+    .body-2 {
+        background-image: url(images/our_img2.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 70vh;
+        width: 80%;
+        margin: 80px auto;
+        color: white;
+        padding: 25px;
+
+    }
+
+    .body-2 h2 {
+        margin-top: 180px;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+
+    .body-2 p {
+        line-height: 26px;
+        margin-bottom: 50px;
+    }
+
+    .post-2 {
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+    }
+
+
+
+
+
+
+
+    .body-3 {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-pic {
+        width: 48%;
+        box-shadow: rgb(179, 177, 177) 1px 1px 4px 1px;
+    }
+
+    .right-pic {
+        width: 48%;
+        box-shadow: rgb(179, 177, 177) 1px 1px 4px 1px;
+
+    }
+
+    .post-div {
+        padding: 20px;
+        color: rgba(0, 0, 0, 0.801);
+    }
+
+    .post-3 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .post-div p {
+        margin-top: 20px;
+        line-height: 25px;
+    }
+
+
+
+
+
+
+    .body-4 {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .our {
+        display: flex;
+        margin: 80px 0;
+        box-shadow: rgb(179, 177, 177) 1px 1px 4px 1px;
+        color: rgba(0, 0, 0, 0.801);
+    }
+
+    .our-food {
+        padding: 20px 20px 20px 40px;
+    }
+
+    .our-food h1 {
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+
+    .our-food p {
+        line-height: 30px;
+    }
+
+    .post-4 {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+
+
+
+
+
+    .body-5 {
+        background-image: url(images/test_bg.jpg);
+        color: white;
+    }
+
+    .body-5 .textim {
+        display: flex;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        height: 60vh;
+    }
+
+    .textimonial {
+        width: 72%;
+    }
+
+    .body-5 .img {
+        border: solid aqua 15px;
+        border-radius: 50%;
+    }
+
+    .body-5 h1 {
+        margin-bottom: 85px;
+    }
+
+    .body-5 h2 {
+        margin-bottom: 15px;
+    }
+
+    .body-5 p {
+        line-height: 30px;
+    }
+
+
+
+
+
+    .body-6 {
+        width: 70%;
+        margin: 70px auto;
+        color: rgba(0, 0, 0, 0.801);
+    }
+
+    .body-6 h1 {
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: sans-serif;
+    }
+
+    .body-6 h2 {
+        text-align: center;
+        font-size: 15px;
+        font-family: sans-serif;
+        margin: 30px 0;
+    }
+
+    .table {
+        border: solid 1px black;
+        height: 75vh;
+        padding: 50px;
+    }
+
+    .table hr {
+        margin: 30px 10px;
+    }
+
+    .table h3 {
+        margin-left: 10px;
+        color: rgba(0, 0, 0, 0.801);
+    }
+
+    .table button {
+        padding: 12px 55px;
+        font-size: larger;
+        color: white;
+        background-color: black;
+        border: none;
+        float: right;
+        margin-top: 20px;
+        transition: 1s;
+    }
+
+    .table button:hover {
+        background-color: #20c997;
+        border-radius: 30px;
+    }
+
+
+
+
+
+
+    .body-7 {
+        text-align: center;
+    }
+    .text-area h1:nth-child(1) {
+        color: #047050;
+        margin-bottom: 15px;
+    }
+    .text-area h1:nth-child(2) {
+        color: rgba(0, 0, 0, 0.801);
+        margin-bottom: 15px;
+    }
+    .icons i {
+        margin-left: 12px;
+        border-radius: 50%;
+        border: none;
+        padding: 15px 15px;
+        font-size: 25px;
+        box-shadow: rgb(179, 177, 177) 1px 1px 4px 1px;
+        transition: 1s;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .icons i:hover {
+        background-color: #047050;
+        color: white;
+    }
+    .green-line{
+        background-color: #047050;
+        color: white;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        text-align: center;
+    }
+    .green-line h3 {
+        text-align: center;
+        width: 100%;
+        font-size: large;
+    }
+</style>
+
+<body>
+    <div class="container">
+
+        <div class="head">
+            <div class="blogger">
+                <h1>Blogger</h1>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="blog">
+                <div class="landing">
+                    <h1>Blog</h1>
+                    <h1>Landing page 2019</h1>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when
+                        looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters,</p>
+                    <button>Read More</button>
+                </div>
+                <div class="video-icon">
+                    <img src="images/box_img.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="body-1">
+            <h1>Our Blogs</h1>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page
+            </p>
+            <div class="div">
+                <div class="img">
+                    <img src="images/our_img1.jpg" width="500px" height="460" alt="">
+                </div>
+                <div class="text">
+                    <h2>The biggest and most awesome Photo of year
+                    </h2>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when
+                        looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here, content here', making it look like
+                        readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as
+                        their
+                        default model
+                    </p>
+                    <div class="post">
+                        <h4>Post By:Blogger</h4>
+                        <h4><img src="images/like.png" alt=""> <sup> Like </sup> </h4>
+                        <h4><img src="images/comm.png" alt=""> <sup> Comment</sup></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-2">
+            <h2>This week is incelebrity homes love food</h2>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
+                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden
+                in the middle of text. All the Lorem Ipsum generators on the Internet tend to repea
+            </p>
+            <div class="post-2">
+                <h4>Post By:Blogger</h4>
+                <h4><img src="images/like1.png" alt=""> <sup> Like </sup> </h4>
+                <h4><img src="images/comm1.png" alt=""> <sup> Comment</sup></h4>
+            </div>
+        </div>
+
+        <div class="body-3">
+            <div class="left-pic">
+                <img src="images/our_img3.jpg" width="518px" alt="">
+                <div class="post-div">
+                    <div class="post-3">
+                        <h3>Chad-Montano</h3>
+                        <h4>Post By:Blogger</h4>
+                        <h4><img src="images/like.png" alt=""> <sup> Like </sup> </h4>
+                        <h4><img src="images/comm.png" alt=""> <sup> Comment</sup></h4>
+                    </div>
+                    <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris
+                    </p>
+                </div>
+            </div>
+            <div class="right-pic">
+                <img src="images/our_img4.jpg" width="518px" alt="">
+                <div class="post-div">
+                    <div class="post-3">
+                        <h3>Amezing Place</h3>
+                        <h4>Post By:Blogger</h4>
+                        <h4><img src="images/like.png" alt=""> <sup> Like </sup> </h4>
+                        <h4><img src="images/comm.png" alt=""> <sup> Comment</sup></h4>
+                    </div>
+                    <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minimquis nostrud exercitation ullamco laboris
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-4">
+            <div class="our">
+                <div class="img">
+                    <img src="images/our_img5.jpg" width="518px" alt="">
+                </div>
+                <div class="our-food">
+                    <h1>Our food Quick is comment</h1>
+                    <p>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                        culpa qui officia deserunt mollit anim id
+                    </p>
+                    <div class="post-4">
+                        <h4>Post By:Blogger</h4>
+                        <h4><img src="images/like.png" alt=""> <sup> Like </sup> </h4>
+                        <h4><img src="images/comm.png" alt=""> <sup> Comment</sup></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="body-5">
+            <div class="textim">
+                <div class="img">
+                    <img src="images/plan1.png" alt="">
+                </div>
+                <div class="textimonial">
+                    <h1>Testimonial</h1>
+                    <h2>WILL SMITHE
+                    </h2>
+                    <p>Tof Lorem Ipsum, you need to be There are many variations of passages of Lorem Ipsum available,
+                        but
+                        the majority have suffered alteration in some form, by injected humour, or randomised words
+                        which
+                        don't look even slightly believable. If you are going to use a pass
+                        age of Lorem Ipsum, you need to be
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="body-6">
+            <h1>Contact us</h1>
+            <h3>There are many variations of passages of Lorem Ipsum available, but the</h3>
+            <form action="">
+                <input type="Name" placeholder="Name">
+                <input type="number" placeholder="Phone Number">
+                <input type="email" placeholder="Enter email address">
+                <input type="Name" placeholder="Name">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Massage"></textarea>
+                <input type="submit" value="Send">
+
+            </form>
+        </div> -->
+
+        <div class="body-6">
+            <h1>Contact us</h1>
+            <h2>There are many variations of passages of Lorem Ipsum available, but the</h2>
+            <div class="table">
+                <h3>Name</h3>
+                <hr>
+                <h3>Phone Number</h3>
+                <hr>
+                <h3>Email</h3>
+                <hr>
+                <h3>Message</h3>
+                <hr>
+                <button>SEND</button>
+            </div>
+        </div>
+
+        <div class="body-7">
+            <div class="footer">
+                <div class="text-area">
+                    <h1>Free Multipurpose Responsive</h1>
+                    <h1>Landing Page 2019</h1>
+                </div>
+                <div class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="green-line">
+                    <h3> &copy; 2019 All Rights Reserved. Design by Free Html Templates</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
